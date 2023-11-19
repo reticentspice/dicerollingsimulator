@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<head>
+    <script src="cdn.canvasjs.com_canvasjs.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <header>
+        <title>Dice Rolling Simulator</title>
+        <h1>Dice Rolling Simulator</h1>
+    </header>
+    <main>
+        <aside class="help-tip">
+            <p>This page simulates the results of rolling any number of dice,
+                of any number of sides, any number of times. Enter the number of sides you want your dice
+                to have, then the number of dice you want to roll, then the number of times you want to roll
+                those dice. For example, if you want to see the distribution of results when rolling five D6
+                dice many times, you could enter "6" for the number of sides, "5" for the number of dice,
+                and "1000000" for the number of times.</p>
+        </aside>
+
+        <section id="questions">
+            <p><label for="numberofsides">How many sides should the dice have?</label>
+                <input type="text" tabindex="1" id="numberofsides">
+            </p>
+            <p><span id="errorone"></span>
+            </p>
+            <p><label for="numberofdice">How many dice do you want to roll?</label>
+                <input type="text" tabindex="2" id="numberofdice">
+            </p>
+            <p><span id="errortwo"></span>
+            </p>
+            <p><label for="timesrolled">How many times do you want to roll the dice?</label>
+                <input type="text" tabindex="3" id="timesrolled">
+            </p>
+            <p><span id="errorthree"></span>
+            </p>
+            <p> <button id="submit" onclick="rollthosedice()">Submit</button>
+            </p>
+        </section>
+
+        <section class="results">
+            <figure id="chartContainer" style="height: 500px; width: 70%; float:left">
+
+            </figure>
+
+            <section class="container" id="results">
+                <ul id="result-list">
+
+                </ul>
+            </section>
+
+            <section class="container" id="frequencies">
+                <ul id="frequency-list">
+
+                </ul>
+            </section>
+
+
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
